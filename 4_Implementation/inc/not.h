@@ -1,5 +1,5 @@
-#ifndef __NOTNORNAND_H__
-#define __NOTNORNAND_H__
+#ifndef __NOT_H__
+#define __NOT_H__
 
 #include <stdio.h>
 #include <stdlib.h>
