@@ -16,8 +16,7 @@ Req_ID |  Low level requirements  |Description  | Owner|
 -------|--------------------------|-------------|------|
 Req_01 |Addition and subtraction  |It produces the output as the sum of the two numbers irrespective of sign of the numbers.|Pavani|
 Req_02 |Multiplication and division|Multiplication is repeated addition,number times a numberDivision is to divide, a number splits into equal form using the second number|Saloni|
-Req_03 |AND, OR|AND- The result of the operation is 1 if both the bits have the value as 1; otherwise, the result is always 0.
-OR - The result of the operation is 1 if only one of the expressions has the value as 1; otherwise, the result is always 0.|Tulasi|
+Req_03 |AND, OR|AND- The result of the operation is 1 if both the bits have the value as 1; otherwise, the result is always 0.OR - The result of the operation is 1 if only one of the expressions has the value as 1; otherwise, the result is always 0.|Tulasi|
 
 
 
