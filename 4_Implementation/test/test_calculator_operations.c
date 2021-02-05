@@ -10,6 +10,11 @@ void test_add(void);
 void test_subtract(void);
 void test_multiply(void);
 void test_divide(void);
+void test_greater(void);
+void test_smaller(void);
+void test_rectarea(void);
+void test_rectperi(void);
+void test_prime(void);
 void test_bitwiseand(void);
 void test_bitwiseor(void);
 void test_bitwisenot(void);
@@ -20,9 +25,9 @@ void test_or(void);
 void test_not(void);
 void test_nand(void);
 void test_nor(void);
-void test_prime(void);
 void test_factorial(void);
-
+void test_adder3bit(void);
+void test_subtractor3bit(void);
 
 
 /* Start of the application test */
@@ -40,6 +45,11 @@ int main() {
   CU_add_test(suite, "subtract", test_subtract);
   CU_add_test(suite, "multiply", test_multiply);
   CU_add_test(suite, "divide", test_divide);
+  CU_add_test(suite, "greater", test_greater);
+  CU_add_test(suite, "smaller", test_smaller);
+  CU_add_test(suite, "rectarea", test_rectarea);
+  CU_add_test(suite, "rectperi", test_rectperi);
+  CU_add_test(suite, "prime", test_prime);
   CU_add_test(suite, "bitwiseand", test_bitwiseand);
   CU_add_test(suite, "bitwiseor", test_bitwiseor);
   CU_add_test(suite, "bitwisenot", test_bitwisenot);
@@ -50,9 +60,9 @@ int main() {
   CU_add_test(suite, "not", test_not);
   CU_add_test(suite, "and", test_nand);
   CU_add_test(suite, "or", test_nor);
-  CU_add_test(suite, "prime", test_prime);
   CU_add_test(suite, "factorial", test_factorial);
-
+  CU_add_test(suite, "adder3bit", test_adder3bit);
+  CU_add_test(suite, "subtractor3bit", test_subtractor3bit);
 
 
 /* Note: Do not edit START*/
@@ -74,7 +84,7 @@ void test_add(void) {
   
   /* Dummy fail*/
   CU_ASSERT(1500 == add(750, 7500));
-} CU_add_test(suite, "factorial", test_factorial);
+}
 
 void test_subtract(void) {
   CU_ASSERT(-3 == subtract(0, 3));
@@ -93,11 +103,44 @@ void test_multiply(void) {
 void test_divide(void) {
   CU_ASSERT(0 == divide(1, 0));
   
-  /* Dummy fail*/void test_factorial(void) {
-  CU_ASSERT(12 == factorial(4));
+  /* Dummy fail*/
+  CU_ASSERT(3 == divide(2, 2));
+}
+
+void test_greater(void) {
+  CU_ASSERT(8 == greater(4, 8));
   
   /* Dummy fail*/
-  CU_ASSERT(5 == factorial(2));
+  CU_ASSERT(3 == greater(7, 3));
+}
+
+void test_smaller(void) {
+  CU_ASSERT(4 == smaller(4, 8));
+  
+  /* Dummy fail*/
+  CU_ASSERT(7 == smaller(7, 3));
+}
+
+void test_rectarea(void) {
+  CU_ASSERT(40 == rectarea(5, 8));
+  
+  /* Dummy fail*/
+  CU_ASSERT(20 == rectarea(7, 3));
+}
+
+void test_rectperi(void) {
+  CU_ASSERT(20 == rectperi(4, 6));
+  
+  /* Dummy fail*/
+  CU_ASSERT(15 == rectperi(7, 3));
+}
+
+void test_prime(void) {
+  CU_ASSERT(0 == prime(6));
+  CU_ASSERT(1 == prime(3));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == prime(3));
 }
 
 void test_bitwiseand(void) {
@@ -164,19 +207,22 @@ void test_nor(void) {
   /* Dummy fail*/
   CU_ASSERT(1 == or(1,1));
 }
-
-void test_prime(void) {
-  CU_ASSERT(0 == prime(6));
-  CU_ASSERT(1 == prime(3));
-  
-  /* Dummy fail*/
-  CU_ASSERT(0 == prime(3));
-}
-
 void test_factorial(void) {
   CU_ASSERT(12 == factorial(4));
   
   /* Dummy fail*/
   CU_ASSERT(5 == factorial(2));
 }
+void test_adder3bit(void) {
+  CU_ASSERT(0 == adder3bit(1,1,0));
   
+  /* Dummy fail*/
+  CU_ASSERT(1 == adder3bit(1,0,0));
+}
+void test_subtractor3bit(void) {
+  CU_ASSERT(0 == adder3bit(1,1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(1 == adder3bit(1,0,0));
+}
+
