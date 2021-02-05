@@ -1,10 +1,4 @@
-<img src="highlevel/Exponential Structural UML Diagram.png"
-     alt="highlevel/Exponential Structural UML Diagram"
-     style="float: left; margin-right: 10px;" />
-     
-  <img src="Exponential Behavioural UML Diagram.png"
-     alt="Exponential Behavioural UML Diagram"
-     style="float: left; margin-right: 10px;" />   
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/highlevel/struc.jpg)
 
 
 
