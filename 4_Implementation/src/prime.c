@@ -16,4 +16,3 @@ int prime(int operand1)
     if(flag==0)         
     return 1;  
 }
-    
