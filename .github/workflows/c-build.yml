@@ -16,4 +16,3 @@ jobs:
       
     - name: make all
       run:  make all -C 4_Implementation
-      
