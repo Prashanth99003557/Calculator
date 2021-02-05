@@ -1,3 +1,4 @@
+
 /** 
 * @file calculator_operations.h
 * Calculator application with 4 mathematical operations
@@ -190,3 +191,11 @@ int subtractor3bit(int operand1, int operand2, int operand3);
 
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
+double exponent(float num);
+
+/**
+*  An exponential function can be described as a growth or decay function that is in the form of e^x.
+*  The function returns the value of e^num where e is Euler's number and it's value is 2.718
+* @param[in] num 
+* @return Result of the the exponential operation
+*/
