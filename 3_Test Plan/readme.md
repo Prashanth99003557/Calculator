@@ -1,6 +1,11 @@
 # Test Plan (High Level)
 
-
+| Test ID  | Description  | Expected I/O  |  Expected O/P |
+|---|---|---|---|
+| 1  | Enter the numbers in the calculator  | User is able to enter numbers in the calculator  | Will show the correct numbers entered by the user  |
+| 2  | Selecting operation  | Proper display of output which can be recognized by the user  | Will display results with good visibility  |
+| 3  | Display  |   |   |
+| 4  | Check the number of digits on display are within the limit  | Number of digits entered by user within the limit  | Number of digits entered are within a limit   |
 
 # Test Plan (Low Level)
 ## Addition/Subtraction Test Plan
