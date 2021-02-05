@@ -44,6 +44,37 @@ int multiply(int operand1, int operand2);
 */
 int divide(int operand1, int operand2);
 
+/**
+* finds greater number from operand1 & operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the operand1 > operand2
+*/
+int greater(int operand1, int operand2);
+
+/**
+* finds smaller number from operand1 & operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the operand1 < operand2
+*/
+int smaller(int operand1, int operand2);
+
+/**
+* area of rectangle with operand1 & operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the area of rectangle with operand1 & operand2
+*/
+int rectarea(int operand1, int operand2);
+
+/**
+* perimeter of rectangle with operand1 & operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of the perimeter of rectangle with operand1 & operand2
+*/
+int rectperi(int operand1, int operand2);
 
 /**
 * prime of operand1 and returns the result 
@@ -137,6 +168,25 @@ int nor(int operand1, int operand2);
 * @return Result will be factorial of operand1
 */
 int factorial(int operand1);
+
+/**
+*  Perform adder for operand1, operand2 and operand3  returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @param[in] operand3 
+* @return Result of the the adder operation
+*/
+int adder3bit(int operand1, int operand2, int operand3);
+
+
+/**
+*  Perform adder for operand1, operand2 and operand3  returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @param[in] operand3 
+* @return Result of the the adder operation
+*/
+int subtractor3bit(int operand1, int operand2, int operand3);
 
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
