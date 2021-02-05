@@ -15,8 +15,7 @@ Low level requirements
 Req_ID |  Low level requirements  |Description  | Owner|
 -------|--------------------------|-------------|------|
 Req_01 |Addition and subtraction  |It produces the output as the sum of the two numbers irrespective of sign of the numbers.|Pavani|
-Req_02 |Multiplication and division|Multiplication is repeated addition,number times a number
-Division is to divide, a number splits into equal form using the second number|Saloni
+Req_02 |Multiplication and division|Multiplication is repeated addition,number times a numberDivision is to divide, a number splits into equal form using the second number|Saloni
 
 
 
