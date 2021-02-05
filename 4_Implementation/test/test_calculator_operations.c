@@ -10,23 +10,25 @@ void test_add(void);
 void test_subtract(void);
 void test_multiply(void);
 void test_divide(void);
-void test_power(void);
-void test_square(void);
-void test_prime(void);
-void test_smaller(void);
 void test_greater(void);
-void test_factorial(void);
+void test_smaller(void);
+void test_rectarea(void);
+void test_rectperi(void);
+void test_prime(void);
+void test_bitwiseand(void);
+void test_bitwiseor(void);
+void test_bitwisenot(void);
 void test_modulus(void);
-void test_squareroot(void);
-void test_sinvalue(void);
-void test_cosvalue(void);
-void test_tanvalue(void);
-void test_centitometer(void);
-void test_metertocenti(void);
-void test_metertokm(void);
-void test_kmtometer(void);
-void test_centitoinch(void);
-void test_inchtocenti(void);
+void test_square(void);
+void test_and(void);
+void test_or(void);
+void test_not(void);
+void test_nand(void);
+void test_nor(void);
+void test_factorial(void);
+void test_adder3bit(void);
+void test_subtractor3bit(void);
+
 
 /* Start of the application test */
 int main() {
@@ -43,24 +45,24 @@ int main() {
   CU_add_test(suite, "subtract", test_subtract);
   CU_add_test(suite, "multiply", test_multiply);
   CU_add_test(suite, "divide", test_divide);
-  CU_add_test(suite, "power", test_power);
-  CU_add_test(suite, "square", test_square);
-  CU_add_test(suite, "prime", test_prime);
-  CU_add_test(suite, "smaller", test_smaller);
   CU_add_test(suite, "greater", test_greater);
-  CU_add_test(suite, "factorial", test_factorial);
+  CU_add_test(suite, "smaller", test_smaller);
+  CU_add_test(suite, "rectarea", test_rectarea);
+  CU_add_test(suite, "rectperi", test_rectperi);
+  CU_add_test(suite, "prime", test_prime);
+  CU_add_test(suite, "bitwiseand", test_bitwiseand);
+  CU_add_test(suite, "bitwiseor", test_bitwiseor);
+  CU_add_test(suite, "bitwisenot", test_bitwisenot);
   CU_add_test(suite, "modulus", test_modulus);
-  CU_add_test(suite, "squareroot", test_squareroot);
-  CU_add_test(suite, "sinvalue", test_sinvalue);
-  CU_add_test(suite, "cosvalue", test_cosvalue);
-  CU_add_test(suite, "tanvalue", test_tanvalue);
-  CU_add_test(suite, "centitometer", test_centitometer);
-  CU_add_test(suite, "metertocenti", test_metertocenti);
-  CU_add_test(suite, "metertokm", test_metertokm);
-  CU_add_test(suite, "kmtometer", test_kmtometer);
-  CU_add_test(suite, "inchtocenti", test_inchtocenti);
-  CU_add_test(suite, "centitoinch", test_centitoinch);
-
+  CU_add_test(suite, "square", test_square);
+  CU_add_test(suite, "and", test_and);
+  CU_add_test(suite, "or", test_or);
+  CU_add_test(suite, "not", test_not);
+  CU_add_test(suite, "and", test_nand);
+  CU_add_test(suite, "or", test_nor);
+  CU_add_test(suite, "factorial", test_factorial);
+  CU_add_test(suite, "adder3bit", test_adder3bit);
+  CU_add_test(suite, "subtractor3bit", test_subtractor3bit);
 
 
 /* Note: Do not edit START*/
@@ -105,124 +107,121 @@ void test_divide(void) {
   CU_ASSERT(3 == divide(2, 2));
 }
 
-void test_power(void) {
-  CU_ASSERT(100 == power(10, 2));
+void test_greater(void) {
+  CU_ASSERT(8 == greater(4, 8));
   
   /* Dummy fail*/
-  CU_ASSERT(3 == power(2, 2));
-}
-
-void test_square(void) {
-  CU_ASSERT(100 == square(10));
-  
-  /* Dummy fail*/
-  CU_ASSERT(1500 == square(25));
-}
-
-void test_prime(void) {
-  CU_ASSERT(1 == prime(89));
-  CU_ASSERT(-1 == prime(-12))
-  
-  /* Dummy fail*/
-  CU_ASSERT(0 == prime(97));
+  CU_ASSERT(3 == greater(7, 3));
 }
 
 void test_smaller(void) {
-  CU_ASSERT(10 == smaller(10,20));
+  CU_ASSERT(4 == smaller(4, 8));
   
   /* Dummy fail*/
-  CU_ASSERT(25 == smaller(25,5));
+  CU_ASSERT(7 == smaller(7, 3));
 }
 
-void test_greater(void) {
-  CU_ASSERT(20 == greater(10,20));
+void test_rectarea(void) {
+  CU_ASSERT(40 == rectarea(5, 8));
   
   /* Dummy fail*/
-  CU_ASSERT(5 == greater(25,5));
+  CU_ASSERT(20 == rectarea(7, 3));
 }
 
-void test_factorial(void) {
-  CU_ASSERT(6 == factorial(3));
-  CU_ASSERT(-1 == factorial(-12))
+void test_rectperi(void) {
+  CU_ASSERT(20 == rectperi(4, 6));
   
   /* Dummy fail*/
-  CU_ASSERT(10 == factorial(97));
+  CU_ASSERT(15 == rectperi(7, 3));
+}
+
+void test_prime(void) {
+  CU_ASSERT(0 == prime(6));
+  CU_ASSERT(1 == prime(3));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == prime(3));
+}
+
+void test_bitwiseand(void) {
+  CU_ASSERT(0 == bitwiseand(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwiseand(1,1));
+}
+
+void test_bitwiseor(void) {
+  CU_ASSERT(1 == bitwiseor(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwiseor(1,1));
+}
+
+void test_bitwisenot(void) {
+  CU_ASSERT(0 == bitwisenot(1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwisenot(0));
 }
 
 void test_modulus(void) {
-  CU_ASSERT(5 == modulus(105,10));
+  CU_ASSERT(3 == divide(10, 7));
   
   /* Dummy fail*/
-  CU_ASSERT(5 == modulus(25,5));
+  CU_ASSERT(1 == divide(2, 2));
 }
 
-void test_squareroot(void) {
-  CU_ASSERT(3 == squareroot(9));
+void test_square(void) {
+  CU_ASSERT(49 == square(7));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == squareroot(100));
+  CU_ASSERT(5 == square(2));
 }
-
-void test_sinvalue(void) {
-  CU_ASSERT(0 == sinvalue(0));
+void test_and(void) {
+  CU_ASSERT(1 == and(1,1));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == sinvalue(12));
+  CU_ASSERT(1 == and(1,0));
 }
-
-void test_cosvalue(void) {
-  CU_ASSERT(1 == cosvalue(0));
+void test_or(void) {
+  CU_ASSERT(1 == or(1,0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == cosvalue(12));
+  CU_ASSERT(0 == or(1,1));
 }
-
-void test_tanvalue(void) {
-  CU_ASSERT(1 == tanvalue(45));
+void test_not(void) {
+  CU_ASSERT(1 == not(0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == tanvalue(12));
+  CU_ASSERT(0 == not(0));
 }
-
-void test_metertocenti(void) {
-  CU_ASSERT(1200 == metertocenti(12));
+void test_nand(void) {
+  CU_ASSERT(0 == and(1,1));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == metertocenti(12));
+  CU_ASSERT(0 == and(1,0));
 }
-
-
-void test_centitometer(void) {
-  CU_ASSERT(12 == centitometer(1200));
+void test_nor(void) {
+  CU_ASSERT(0 == or(1,0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == centitometer(12));
+  CU_ASSERT(1 == or(1,1));
 }
-
-void test_kmtometer(void) {
-  CU_ASSERT(1000 == kmtometer(1));
+void test_factorial(void) {
+  CU_ASSERT(12 == factorial(4));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == kmtometer(12));
+  CU_ASSERT(5 == factorial(2));
 }
-
-void test_metertokm(void) {
-  CU_ASSERT(1 == metertokm(1000));
+void test_adder3bit(void) {
+  CU_ASSERT(0 == adder3bit(1,1,0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == metertokm(12));
+  CU_ASSERT(1 == adder3bit(1,0,0));
 }
-
-void test_centitoinch(void) {
-  CU_ASSERT(100 == centitoinch(254));
+void test_subtractor3bit(void) {
+  CU_ASSERT(0 == adder3bit(1,1,0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == centitoinch(12));
-}
-
-void test_inchtocenti(void) {
-  CU_ASSERT(254 == inchtocenti(100));
-  
-  /* Dummy fail*/
-  CU_ASSERT(1 == inchtocenti(12));
+  CU_ASSERT(1 == adder3bit(1,0,0));
 }
