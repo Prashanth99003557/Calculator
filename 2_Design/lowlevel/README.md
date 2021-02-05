@@ -6,4 +6,6 @@
      
   <img src="Exponential Behavioural UML Diagram.png"
      alt="Exponential Behavioural UML Diagram"
-     style="float: left; margin-right: 10px;" />   
+     style="float: left; margin-right: 10px;" />  
+ structutal diagram for decimal to binary conversion and hexadecimal to binary conversion:
+ ![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/stru%20diag.PNG)
