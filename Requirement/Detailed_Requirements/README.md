@@ -10,3 +10,10 @@ Req_05 |Prime number              |A positive integer that is not divisible with
 Req_06 |Exponential function      |An exponential function can be described as a growth or decay function that is in the form of e^x|
 
 
+
+Low level requirements
+Req_ID |  Low level requirements  |Description  | Owner|
+-------|--------------------------|-------------|------|
+Req_01 |Addition and subtraction  |It produces the output as the sum of the two numbers irrespective of sign of the numbers.|Pavani|
+
+
