@@ -7,3 +7,4 @@
      style="float: left; margin-right: 10px;" />   
 
 
+<img title="highlevel/Exponential Structural UML Diagram" alt="Alt text" src="/highlevel/highlevel/Exponential Structural UML Diagram.png">
