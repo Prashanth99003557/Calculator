@@ -1,9 +1,21 @@
-<img src="highlevel/Exponential Structural UML Diagram.png"
-     alt="highlevel/Exponential Structural UML Diagram"
-     style="float: left; margin-right: 10px;" />
-     
-  <img src="Exponential Behavioural UML Diagram.png"
-     alt="Exponential Behavioural UML Diagram"
-     style="float: left; margin-right: 10px;" />   
+ 
+HIGH LEVEL
+
+Behavioral:
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/highlevel/behighdesign.jpeg)
+Structural:
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/highlevel/struc.jpg)
 
 
+LOWLEVEL:
+
+Binary to deciaml:
+
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/umlbtohex.jpeg)
+Binary to Hexadeciaml:
+
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/umlbtoh.jpeg)
+
+
+
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/Exponential%20Behavioural%20UML%20Diagram.png)
