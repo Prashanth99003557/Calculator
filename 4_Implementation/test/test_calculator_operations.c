@@ -179,3 +179,4 @@ void test_factorial(void) {
   /* Dummy fail*/
   CU_ASSERT(5 == factorial(2));
 }
+  
