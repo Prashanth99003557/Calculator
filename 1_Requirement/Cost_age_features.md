@@ -74,10 +74,9 @@ CASIO PRIZM by CASIO
 The world of mobile devices swiftly moved to full-colour screens in the early 2000s, it took a while for graphing calculators to grab up. Casio&#39;s PRIZM calculator, with its exceptional, 216x384 resolution, full-colour vanity.
 
     1. **Cost**
-
-![](RackMultipart20210205-4-1gpc26h_html_e603ed838aa9f89c.gif)
-
-![](RackMultipart20210205-4-1gpc26h_html_15ac97c2655bd7fb.png)
+x-special/nautilus-clipboard
+copy
+file:///home/ltts/Downloads/cost.jpg
 
 1. **Problem Statement**
 
