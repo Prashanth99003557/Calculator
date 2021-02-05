@@ -5,7 +5,6 @@ double exponent(float num)
     float x;
     double result;
     const float e = 2.71828;
-    result = 0;
     if(x==0)
     {
         result = 1;
