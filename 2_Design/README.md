@@ -21,3 +21,7 @@ AND & OR
 
 ![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/Exponential%20Behavioural%20UML%20Diagram.png)
 
+Multiplication and division
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/flowchart_Division.png)
+![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/flowchart_Mult.png)
+
