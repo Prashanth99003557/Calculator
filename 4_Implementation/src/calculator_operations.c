@@ -1,4 +1,5 @@
 #include <calculator_operations.h>
+#include <math.h>
 
 int add(int operand1, int operand2)
 {
@@ -23,62 +24,71 @@ int divide(int operand1, int operand2)
         return operand1 / operand2;
 }
 
-int greater(int operand1, int operand2)
+int square(int operand1)
 {
-    if(operand1 > operand2)
+    return operand1*operand1;
+}
+
+int power(int operand1, int operand2)
+{
+    if(operand2==0)
+        return 1;
+    else if(operand2==1)
         return operand1;
     else
-        return operand2;
-}
-
-int smaller(int operand1, int operand2)
-{
-    if(operand1 < operand2)
-        return operand1;
-    else
-        return operand2;
-}
-
-int rectarea(int operand1, int operand2)
-{
-    return operand1 * operand2;
-}
-
-int rectperi(int operand1, int operand2)
-{
-    return (2*(operand1 + operand2));
+        return pow(operand1, operand2);
 }
 
 int prime(int operand1)
 {
-    int var,number=0,flag=0;     
-    number=operand1/2;    
-    for(var=2;var<=number;var++)    
-    {    
-    if(operand1%var==0)    
-    {    
-    return 0;   
-    flag=1;    
-    break;    
-    }    
-    }    
-    if(flag==0)         
-    return 1;  
+    /* return -1 if a negative number*/
+    int i,count=0;
+    if (operand1<0)
+        return -1;
+
+    for(i=1;i<=operand1;i++)
+    {
+        if((operand1%i)==0)
+        {
+            count++;
+        }
+    }
+    /*return 1 for a prime number*/
+    if(count==2)
+        return 1;
+    /*return 0 for a non prime number*/
+    else
+        return 0;
 }
 
-int bitwiseand(int operand1, int operand2)
+int greater(int operand1, int operand2)
 {
-    return operand1 && operand2;
+    if(operand1>operand2)
+      return operand1;
+    else 
+      return operand2;
 }
 
-int bitwiseor(int operand1, int operand2)
+int smaller(int operand1, int operand2)
 {
-    return operand1 || operand2;
+    if(operand1<operand2)
+      return operand1;
+    else 
+      return operand2;
 }
 
-int bitwisenot(int operand1)
+int factorial(int number)
 {
-    return !operand1;
+  /* Return -1 for negative numbers */
+  if(number < 0)
+    return -1;
+
+  /* Return 1 for 0 */
+  if(number == 0)
+    return 1;
+
+  /* Recursively calculate Factorial of the number */
+  return number * factorial(number-1);
 }
 
 int modulus(int operand1, int operand2)
@@ -86,178 +96,52 @@ int modulus(int operand1, int operand2)
     return operand1 % operand2;
 }
 
-int square(int operand1)
+int squareroot(int operand1)
 {
-    int result;
-    result= operand1 * operand1;
-    return result;
-}
-int and(int operand1, int operand2)
-{
-    int result;
-    if(operand1<0 && operand2<0)
-    return -1;
-    else if(operand1>1 && operand2>1)
-    return 1;
-    else if(operand1==1 && operand2==1)
-    return 1;
-    else
-    return 0;
-}
-int or(int operand1, int operand2)
-{
-    int result;
-    if(operand1<0 && operand2<0)
-    return -1;
-    else if(operand1>1 && operand2>1)
-    return 1;
-    else if(operand1==0 && operand2==0)
-    return 0;
-    else
-    return 1;
+    return sqrt(operand1);
 }
 
-int not(int operand1)
+double sinvalue(int operand1)
 {
-    if(operand1==0)
-        return 1;
-    else
-        return 0;
-}
-int nand(int operand1, int operand2)
-{
-    int result;
-    if(operand1<0 && operand2<0)
-    return -1;
-    else if(operand1>1 && operand2>1)
-    return 0;
-    else if(operand1==1 && operand2==1)
-    return 0;
-    else
-    return 1;
-}
-int nor(int operand1, int operand2)
-{
-    if(operand1<0 && operand2<0)
-    return -1;
-    else if(operand1>1 && operand2>1)
-    return 0;
-    else if(operand1==0 && operand2==0)
-    return 1;
-    else
-    return 0;
-}
-int factorial(int operand1)
-    {   
-        int fact=1;
-        if (operand1==0)
-        {
-            return 1;
-        }
-        if (operand1 < 0)
-        {
-            return 0;
-        }
-        else
-        {
-            for (int i = 1; i <= operand1; ++i)
-            {
-                fact *= i;
-            }
-        return fact;
-        }
-    }
-int adder3bit(int operand1, int operand2, int operand3)
-
-{
-    if(operand1 < 0 || operand2 < 0 || operand3 < 0)
-          {
-             return -1;
-          }
-     else if (operand1 > 1 || operand2 > 1 || operand3 > 1)
-          {
-              return -1;
-           }
-     else
-        {
-           if(operand1==0 && operand2==0 && operand3==0)
-              {
-               return 0;
-              }
-           else if(operand1==0 && operand2==0 && operand3==1)
-              {
-               return 1;
-              }
-            else if(operand1==0 && operand2==1 && operand3==0)
-               {
-               return 1;
-               }
-        else if(operand1==0 && operand2==1 && operand3==1)
-              {
-               return 0;
-               }
-       else if(operand1==1 && operand2==0 && operand3==0)
-               {
-               return 1;
-               }
-       else if(operand1==1 && operand2==0 && operand3==1)
-              {
-               return 0;
-               }
-       else if(operand1==1 && operand2==1 && operand3==0)
-               {
-               return 0;
-               }
-        else 
-              return 1;
-     }
- }
-int subtractor3bit(int operand1, int operand2, int operand3)
-{
-    if(operand1 < 0 || operand2 < 0 || operand3 < 0)
-    {
-        return -1;
-    }
-    else if (operand1 > 1 || operand2 > 1 || operand3 > 1)
-    {
-        return -1;
-    }
-    else
-    {
-        if(operand1==0 && operand2==0 && operand3==0)
-        {
-            return 0;
-        }
-        else if(operand1==0 && operand2==0 && operand3==1)
-        {
-            return 1;
-        }
-        else if(operand1==0 && operand2==1 && operand3==0)
-        {
-            return 1;
-        }
-        else if(operand1==0 && operand2==1 && operand3==1)
-        {
-            return 0;
-        }
-        else if(operand1==1 && operand2==0 && operand3==0)
-        {
-            return 1;
-        }
-        else if(operand1==1 && operand2==0 && operand3==1)
-        {
-            return 0;
-        }
-        else if(operand1==1 && operand2==1 && operand3==0)
-        {
-            return 0;
-        }
-        else if(operand1==1 && operand2==1 && operand3==1)
-        {
-            return 1;
-        }
-    }
+    return sin(operand1);
 }
 
+double cosvalue(int operand1)
+{
+    return cos(operand1);
+}
 
+double tanvalue(int operand1)
+{
+    return tan(operand1);
+}
 
+float centitometer(float operand1)
+{
+    return operand1/100;
+}
+
+float metertocenti(float operand1)
+{
+    return operand1*100;
+}
+
+float metertokm(float operand1)
+{
+    return operand1/1000;
+}
+
+float kmtometer(float operand1)
+{
+    return operand1*1000;
+}
+
+float inchtocenti(float operand1)
+{
+    return operand1*2.54;
+}
+
+float centitoinch(float operand1)
+{
+    return operand1/2.54;
+}
