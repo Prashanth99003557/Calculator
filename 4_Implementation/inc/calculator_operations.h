@@ -1,4 +1,3 @@
-
 /** 
 * @file calculator_operations.h
 * Calculator application with 4 mathematical operations
@@ -10,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdio_ext.h>
+#include <math.h>
 
 /**
 *  adds the operand1 and operand2 and returns the result
@@ -46,156 +46,127 @@ int multiply(int operand1, int operand2);
 int divide(int operand1, int operand2);
 
 /**
-* finds greater number from operand1 & operand2 and returns the result 
+* gives the square of the number
 * @param[in] operand1 
-* @param[in] operand2 
-* @return integer value of the operand1 > operand2
-*/
-int greater(int operand1, int operand2);
-
-/**
-* finds smaller number from operand1 & operand2 and returns the result 
-* @param[in] operand1 
-* @param[in] operand2 
-* @return integer value of the operand1 < operand2
-*/
-int smaller(int operand1, int operand2);
-
-/**
-* area of rectangle with operand1 & operand2 and returns the result 
-* @param[in] operand1 
-* @param[in] operand2 
-* @return integer value of the area of rectangle with operand1 & operand2
-*/
-int rectarea(int operand1, int operand2);
-
-/**
-* perimeter of rectangle with operand1 & operand2 and returns the result 
-* @param[in] operand1 
-* @param[in] operand2 
-* @return integer value of the perimeter of rectangle with operand1 & operand2
-*/
-int rectperi(int operand1, int operand2);
-
-/**
-* prime of operand1 and returns the result 
-* @param[in] operand1 
-* @param[in] operand2 
-* @return result of operand1 to be prime
-*/
-int prime(int operand1);
-
-/**
-*  bitwise and the operand1, operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of operand1 && operand2
-*/
-int bitwiseand(int operand1, int operand2);
-
-/**
-*  bitwise or the operand1, operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of operand1 || operand2
-*/
-int bitwiseor(int operand1, int operand2);
-
-/**
-*  bitwise not the operand1 and returns the result
-* @param[in] operand1 
-* @return Result of negation of operand1 
-*/
-int bitwisenot(int operand1);
-
-/**
-*  perform modulus of operand1 and operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of operand1 % operand2
-*/
-int modulus(int operand1, int operand2);
-
-/**
-*  Perform sqare of operand1 and returns the result
-* @param[in] operand1 
-* @return Result of the operand1 which is squared
+* @return integer value of the square operand1 
 */
 int square(int operand1);
 
 /**
-*  provides AND of operand1, operand2 and returns the result
+* raises the power of operand1 by operand2 and returns the result 
 * @param[in] operand1 
 * @param[in] operand2 
-* @return Result of the the AND operation
+* @return integer value of the operand1 ^ operand2
 */
-int and(int operand1, int operand2);
-
+int power(int operand1, int operand2);
 
 /**
-*  provides OR of operand1, operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of the the OR operation
-*/
-int or(int operand1, int operand2);
-
-/**
-*  provides NOT of operand1 and returns the result
-* @param[in] operand1 
-* @return Result of the the NOT operation
-*/
-int not(int operand1);
-
-/**
-*  provides NAND of operand1, operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of the the NAND operation
-*/
-int nand(int operand1, int operand2);
-
-/**
-*  provides NOR of operand1, operand2 and returns the result
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of the the NOR operation
-*/
-int nor(int operand1, int operand2);
-
-/**
-*  Perform factorial of operand1 and returns the result
-* @param[in] operand1 
-* @return Result will be factorial of operand1
+* Calculates the factorial of integer number
+* @param[in] num to check whether a prime number or not
+* @return 1 for prime and 0 for non prime
+* @note Returns -1 for negative values
 */
 int factorial(int operand1);
 
 /**
-*  Perform adder for operand1, operand2 and operand3  returns the result
+* Gives the greater of operand1 by operand2 and returns the result 
 * @param[in] operand1 
 * @param[in] operand2 
-* @param[in] operand3 
-* @return Result of the the adder operation
+* @return integer value of greater operand of operand1 and operand2
 */
-int adder3bit(int operand1, int operand2, int operand3);
-
+int greater(int operand1, int operand2);
 
 /**
-*  Perform adder for operand1, operand2 and operand3  returns the result
+* Gives the smaller of operand1 by operand2 and returns the result 
 * @param[in] operand1 
 * @param[in] operand2 
-* @param[in] operand3 
-* @return Result of the the adder operation
+* @return integer value of smaller operand of operand1 and operand2
 */
-int subtractor3bit(int operand1, int operand2, int operand3);
+int smaller(int operand1, int operand2);
 
+/**
+* Calculates the factorial of integer number
+* @param[in] num to check whether a prime number or not
+* @return 1 for prime and 0 for non prime
+* @note Returns -1 for negative values
+*/
+int prime(int operand1);
 
+/**
+* Gives the modulus of operand1 by operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return integer value of operand1 % operand2
+*/
+int modulus(int operand1, int operand2);
+
+/**
+* Calculates the square root of integer number
+* @param[in] operand1 
+* @return squareroot of operand1
+*/
+int squareroot(int operand1);
+
+/**
+* Calculates the sine of integer number
+* @param[in] operand1 
+* @return sine of operand1
+*/
+double sinvalue(int operand1);
+
+/**
+* Calculates the cos of integer number
+* @param[in] operand1 
+* @return cos of operand1
+*/
+double cosvalue(int operand1);
+
+/**
+* Calculates the tan of integer number
+* @param[in] operand1 
+* @return tan of operand1
+*/
+double tanvalue(int operand1);
+
+/**
+* Converts centimeters to meters
+* @param[in] operand1 
+* @return operand1 in meters
+*/
+float centitometer(float operand1);
+
+/**
+* Converts meters to centimeters
+* @param[in] operand1 
+* @return operand1 in centimeters
+*/
+float metertocenti(float operand1);
+
+/**
+* Converts meters to kilometers
+* @param[in] operand1 
+* @return operand1 in kilometers
+*/
+float metertokm(float operand1);
+
+/**
+* Converts kilometers to meters
+* @param[in] operand1 
+* @return operand1 in meters
+*/
+float kmtometer(float operand1);
+
+/**
+* Converts inch to centimeters
+* @param[in] operand1 
+* @return operand1 in centimeters
+*/
+float inchtocenti(float operand1);
+
+/**
+* Converts centimeters to inch
+* @param[in] operand1 
+* @return operand1 in inch
+*/
+float centitoinch(float operand1);
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
-double exponent(float num);
-
-/**
-*  An exponential function can be described as a growth or decay function that is in the form of e^x.
-*  The function returns the value of e^num where e is Euler's number and it's value is 2.718
-* @param[in] num 
-* @return Result of the the exponential operation
-*/
