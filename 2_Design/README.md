@@ -10,8 +10,10 @@ Structural:
 LOWLEVEL:
 
 Binary to deciaml:
+
 ![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/umlbtohex.jpeg)
 Binary to Hexadeciaml:
+
 ![](https://github.com/Prashanth99003557/Calculator/blob/main/2_Design/lowlevel/umlbtoh.jpeg)
 
 
