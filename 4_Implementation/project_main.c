@@ -168,7 +168,7 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case MODULUS:
+        /*case MODULUS:
             printf("\n\t%d % %d\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
@@ -176,7 +176,7 @@ void calculator_menu(void)
             
             __fpurge(stdin);
             getchar();
-            break;
+            break;*/
         case SQUARE:
             printf("\n\t%d = %d\nEnter to continue", 
             calculator_operand1, 
