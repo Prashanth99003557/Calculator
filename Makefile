@@ -5,8 +5,8 @@ PROJECT_NAME = Calculator
 BUILD = build
 
 # All source code files
-SRC = project_main.c\
-src/calculator_operations.c\
+SRC = main.c\
+src/calculator_operations.c
 
 # All test source files
 TEST_SRC = src/calculator_operations.c\
@@ -26,15 +26,16 @@ $(PROJECT_NAME):all
 .PHONY: run clean test  doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out -lm
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT).out
 
+
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
 	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
@@ -44,4 +45,3 @@ clean:
 # Create new build folder if not present
 $(BUILD):
 	mkdir build
-
