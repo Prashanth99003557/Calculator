@@ -22,9 +22,9 @@ double exponent(float num)
     else if(x<0)
     {
         result=1;
-        for(int i=0;i<x;i++)
+        for(int i=0;i>x;i--)
         {
-            result=1/(result*e);
+            result=result/e;
         }
         return result;
     }

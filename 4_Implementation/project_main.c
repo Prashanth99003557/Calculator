@@ -13,7 +13,7 @@ int calculator_operand2 = 0;
 int calculator_operand3 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, MODULUS, SQUARE,AND,OR,NOT,NAND,NOR,FACTORIAL, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, MODULUS, SQUARE,AND,OR,NOT,NAND,NOR,FACTORIAL, ADDER3BIT,SUBTRACTOR3BIT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Bitwiseand\n6. Bitwiseor\n7. Bitwisenot\n8. Modulus\n9. Square\n10. AND\n11. OR\n12. NOT\n13. NAND\n14. NOR\n15. Prime\n16. Factorial\n17. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Modulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Adder3bit\n22. Subtractor3bit\n23.  Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -71,7 +71,6 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-
         case SUBTRACT:
             printf("\n\t%d - %d = %d\nEnter to continue", 
             calculator_operand1, 
@@ -81,7 +80,6 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-            
         case MULTIPLY:
             printf("\n\t%d * %d = %d\nEnter to continue", 
             calculator_operand1, 
@@ -91,7 +89,6 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-            
         case DIVIDE:
             printf("\n\t%d / %d = %d\nEnter to continue", 
             calculator_operand1, 
@@ -101,8 +98,50 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        
-        
+        case GREATER:
+            printf("\n\t%d > %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            greater(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case SMALLER:
+            printf("\n\t%d < %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            smaller(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case RECTAREA:
+            printf("\n\t%d * %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            rectarea(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case RECTPERI:
+            printf("\n\t2 * (%d + %d) = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            rectperi(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case PRIME:
+            printf("\n\t%d = %d\nEnter to continue", 
+            calculator_operand1, 
+            prime(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
         case BITWISEAND:
             printf("\n\t%d && %d = %d\nEnter to continue", 
             calculator_operand1, 
@@ -129,7 +168,7 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case MODULUS:
+        /*case MODULUS:
             printf("\n\t%d % %d\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
@@ -137,7 +176,7 @@ void calculator_menu(void)
             
             __fpurge(stdin);
             getchar();
-            break;
+            break;*/
         case SQUARE:
             printf("\n\t%d = %d\nEnter to continue", 
             calculator_operand1, 
@@ -190,15 +229,6 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-
-        case PRIME:
-            printf("\n\t%d = %d\nEnter to continue", 
-            calculator_operand1, 
-            prime(calculator_operand1));
-            
-            __fpurge(stdin);
-            getchar();
-            break; 
         case FACTORIAL:
             printf("\n\t%d! = %d\nEnter to continue", 
             calculator_operand1, 
@@ -207,7 +237,26 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        
+        case ADDER3BIT:
+            printf("\n\tAddition of %d %d %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3, 
+            adder3bit(calculator_operand1, calculator_operand2,calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case SUBTRACTOR3BIT:
+            printf("\n\tSubtraction of %d %d %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3, 
+            subtractor3bit(calculator_operand1, calculator_operand2,calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
         case 23:
             exit(0);
             break;
